@@ -36,18 +36,21 @@ namespace Strings
                 switch (auswahl)
                 {
                     case 1 :
+                        
                         Console.WriteLine("Zeichen sollen ersetzt werden");
                         string zuErsetzen, zeichen , ersatz; ;
                         Console.WriteLine("Zeichenkette eingeben");
                         zuErsetzen = Console.ReadLine();
                         Console.WriteLine("Welches Zeichen soll ersetzt werden");
                         zeichen = Console.ReadLine();
-                        Console.WriteLine("Wodurch soll" + zeichen + " Ersetzt werden?");
+                        Console.WriteLine("Wodurch soll " + zeichen + " Ersetzt werden?");
                         ersatz = Console.ReadLine();
                         Console.WriteLine("Es wird " + zeichen + "durch"+ ersatz + "ersetzt: ");
+                        
+                        
 
-                        string ersetzt="";
-                        zuErsetzen.Replace(zeichen, ersatz);
+                        string ersetzt = zuErsetzen.Replace(zeichen, ersatz);
+
                         //for (int i = 0; i< zuErsetzen.Length; i++)
                         //{
                         //    if (zuErsetzen[i].ToString() == zeichen)
@@ -59,18 +62,19 @@ namespace Strings
                         //        ersetzt += zuErsetzen[i];
                         //    }
                         //}
-
+                        Console.WriteLine(zuErsetzen + " wird zu " + ersetzt);
 
                         break;
                     case 2:
                         Console.WriteLine("Vokale sollen entfernt werden");
                         string Zeichenkette;
-                        Console.WriteLine("Zeichenkette einbgeben");
+                        Console.WriteLine("Zeichenkette eingeben");
                         Zeichenkette = Console.ReadLine();
                         string ergebnis ="" ;
                         ergebnis = Zeichenkette.Replace("a", "");//...
                         ergebnis = Zeichenkette.Replace("A", "");
                         Console.WriteLine(Zeichenkette + "wird zu" + ergebnis);
+   
 
                         Console.WriteLine("Zeichenkette eingeben");
                         break;
