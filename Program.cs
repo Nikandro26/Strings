@@ -28,7 +28,8 @@ namespace Strings
                 //string auswahl;
                 Console.WriteLine("1: Zeichen ersetzen.");
                 Console.WriteLine("2: Vokale entfernen.");
-                Console.WriteLine("3: Beenden");
+                Console.WriteLine("3: Queersumme bilden ");
+                Console.WriteLine("4: Beenden");
 
                 Console.WriteLine("Auswahl : ");
                 auswahl = Convert.ToInt32(Console.ReadLine());
@@ -71,15 +72,40 @@ namespace Strings
                         Console.WriteLine("Zeichenkette eingeben");
                         Zeichenkette = Console.ReadLine();
                         string ergebnis ="" ;
-                        ergebnis = Zeichenkette.Replace("a", "");//...
-                        ergebnis = Zeichenkette.Replace("A", "");
-                        Console.WriteLine(Zeichenkette + "wird zu" + ergebnis);
-   
+                        string Vokale = " aieouaAIEOU ";
+                        string ZeichenketteAlt = Zeichenkette;
+                        string ersetz2 = "";
 
-                        Console.WriteLine("Zeichenkette eingeben");
+                        for( int i = 0; i< Vokale.Length; i++)
+                        {
+                            //Zeichenkette = Zeichenkette.Replace(Vokale[i].ToString(), "" );
+                            //for (int j = 0; j < Zeichenkette.Length; j++) ;
+                            //{
+                            //    if (Zeichenkette[j]== Vokale[i])
+                            //    {
+                            //        ersetz2 += "";
+                            //    }
+                            //    else
+                            //    {
+                            //        ersetz2 += Zeichenkette[i];
+                            //    }
+                            //}
+                        }
+                   
+                        Console.WriteLine(ZeichenketteAlt + "wird zu " + Zeichenkette);
+   
                         break;
                     case 3:
-                        Console.WriteLine("Programm wird beendet");
+                        Console.WriteLine("Geben Sie eine Zahl");
+                        string zahl = Console.ReadLine();
+                        Console.WriteLine("Die Queersumme einer ganzen Zahl soll berechnet werden");
+
+
+
+                        break;
+
+                    case 4:
+                        Console.WriteLine("Programm wird beendet:");
                         break;
                 }
 
