@@ -29,7 +29,8 @@ namespace Strings
                 Console.WriteLine("1: Zeichen ersetzen.");
                 Console.WriteLine("2: Vokale entfernen.");
                 Console.WriteLine("3: Queersumme bilden ");
-                Console.WriteLine("4: Beenden");
+                Console.WriteLine("4: Auf kleinbuchstaben prüfen");
+                Console.WriteLine("5: Beenden");
 
                 Console.WriteLine("Auswahl : ");
                 auswahl = Convert.ToInt32(Console.ReadLine());
@@ -90,21 +91,50 @@ namespace Strings
                             //        ersetz2 += Zeichenkette[i];
                             //    }
                             //}
+                           
                         }
                    
                         Console.WriteLine(ZeichenketteAlt + "wird zu " + Zeichenkette);
    
                         break;
                     case 3:
-                        Console.WriteLine("Geben Sie eine Zahl");
-                        string zahl = Console.ReadLine();
+                        
+                        
                         Console.WriteLine("Die Queersumme einer ganzen Zahl soll berechnet werden");
+                        Console.Write(" Eine ganzen Zahl eingeben ");
+                        string zahl = Console.ReadLine();
+                        int Queersumme = 0;
+                        for ( int i= 0; i<zahl.Length; i++)
+                        {
+                            Queersumme += Convert.ToInt32( zahl[i].ToString() );
+                        }
+                        Console.WriteLine(" Die Queersumme von " + zahl + " ist: " + Queersumme);
 
-
+                        break;
+                    case 4:
+                        Console.WriteLine("Ein String wird auf kleinbuchstaben untersucht");
+                        Console.Write(" Eine Zeichenkette eingeben: " );
+                        string wort = Console.ReadLine();
+                        int zz = 0;
+                        for(int i = 0; i< wort.Length ; i++)
+                        {
+                            if (char.IsLower(wort[i]))
+                            {
+                                zz += 1;
+                            }
+                        }
+                        if (zz>0)
+                        {
+                            Console.WriteLine("Kleinbuchstaben vorhanden");
+                        }
+                        else
+                        {
+                            Console.WriteLine("kein Kleinbuchstabe vorhanden. ");
+                        }
 
                         break;
 
-                    case 4:
+                    case 5:
                         Console.WriteLine("Programm wird beendet:");
                         break;
                 }
